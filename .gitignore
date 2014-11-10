@@ -1,0 +1,6 @@
+Builds/*
+.DS_Store
+Thumbs.db
+.dll
+.so
+.out 
