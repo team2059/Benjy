@@ -1,6 +1,19 @@
-Builds/*
-.DS_Store
-Thumbs.db
-.dll
-.so
-.out 
+/Builds
+warnings.txt
+
+# Libraries
+*.lvlibp
+*.llb
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+
+# Metadata
+*.aliases
+*.lvlps
