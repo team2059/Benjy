@@ -34,3 +34,7 @@ One of Benjy’s strongest traits was its ability to collaborate with other team
 ##### Relay
 - Relay 1 - Collector Motor
 - Relay 10 - Elevator Motor
+
+
+### Documentation
+[GitHub Page](http://team2059.github.io/Benjy/)
