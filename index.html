@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+<TITLE>Robot Main.vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="Robot Main.vi"></A><H2>Robot Main.vi</H2>
+<P>This VI imlements the framework and scheduler for your robotics program. It should not be necessary to modify the framework. You are expected to add your code to the VIs called from Robot Main, the ones located in the Team Code within the project.</P>
+<P><IMG SRC="Robot_Mainc.png" ALT="Robot Main.vi"></P>
+<P><IMG SRC="Robot_Mainp.png" ALT="Robot Main.vi"></P>
+<P><IMG SRC="Robot_Maind.png" ALT="Robot Main.vi"></P>
+<P><IMG SRC="Robot_Maind1.png" ALT="Robot Main.vi"></P>
+<P><IMG SRC="Robot_Maind2.png" ALT="Robot Main.vi"></P>
+<P><IMG SRC="Robot_Maind3.png" ALT="Robot Main.vi"></P>
+<P><IMG SRC="Robot_Maind4.png" ALT="Robot Main.vi"></P>
+<P><IMG SRC="Robot_Maind5.png" ALT="Robot Main.vi"></P>
+<HR>
+<A NAME="Teleop.vi"></A><H2>Teleop.vi</H2>
+<P>This VI is called for each TeleOp packet received from the DS where the robot is not disabled. It is often used to read from the joysticks and update I/O or to update setpoints for timed control loops. It should  complete and return within 20 milliseconds or it may miss DS packets.</P>
+<P><IMG SRC="Teleopc.png" ALT="Teleop.vi"></P>
+<P><IMG SRC="Teleopp.png" ALT="Teleop.vi"></P>
+<P><IMG SRC="Teleopd.png" ALT="Teleop.vi"></P>
+<HR>
+<A NAME="Set Reley.vi"></A><H2>Set Reley.vi</H2>
+<P>Sets a reley in three states forwards, reverse and off.</P>
+<P><IMG SRC="Set_Releyc.png" ALT="Set Reley.vi"></P>
+<P><IMG SRC="Set_Releyp.png" ALT="Set Reley.vi"></P>
+<P><IMG SRC="Set_Releyd.png" ALT="Set Reley.vi"></P>
+<P><IMG SRC="Set_Releyd1.png" ALT="Set Reley.vi"></P>
+<HR>
+<A NAME="Set Motor Speed.vi"></A><H2>Set Motor Speed.vi</H2>
+<P>Sets a motor speed in the range [-1,1].</P>
+<P><IMG SRC="Set_Motor_Speedc.png" ALT="Set Motor Speed.vi"></P>
+<P><IMG SRC="Set_Motor_Speedp.png" ALT="Set Motor Speed.vi"></P>
+<P><IMG SRC="Set_Motor_Speedd.png" ALT="Set Motor Speed.vi"></P>
+<HR>
+<A NAME="Disabled.vi"></A><H2>Disabled.vi</H2>
+<P>This VI is called each time a disabled packet is received from the DS. It is often used to prepare for the next robot mode, to calibrate sensors, etc.</P>
+<P><IMG SRC="Disabledc.png" ALT="Disabled.vi"></P>
+<P><IMG SRC="Disabledp.png" ALT="Disabled.vi"></P>
+<P><IMG SRC="Disabledd.png" ALT="Disabled.vi"></P>
+<HR>
+<A NAME="Get Joystick type.vi"></A><H2>Get Joystick type.vi</H2>
+<P>Converts code to use both the Logitech Extreme 3D Pro Joystick and the Logitech Attack 3 Joystick</P>
+<P><IMG SRC="Get_Joystick_typec.png" ALT="Get Joystick type.vi"></P>
+<P><IMG SRC="Get_Joystick_typep.png" ALT="Get Joystick type.vi"></P>
+<P><IMG SRC="Get_Joystick_typed.png" ALT="Get Joystick type.vi"></P>
+<P><IMG SRC="Get_Joystick_typed1.png" ALT="Get Joystick type.vi"></P>
+<P><IMG SRC="Get_Joystick_typed2.png" ALT="Get Joystick type.vi"></P>
+<HR>
+<A NAME="Joystick to Dashboard.vi"></A><H2>Joystick to Dashboard.vi</H2>
+<P>Sends values from the joystick to the dashboard.</P>
+<P><IMG SRC="Joystick_to_Dashboardc.png" ALT="Joystick to Dashboard.vi"></P>
+<P><IMG SRC="Joystick_to_Dashboardp.png" ALT="Joystick to Dashboard.vi"></P>
+<P><IMG SRC="Joystick_to_Dashboardd.png" ALT="Joystick to Dashboard.vi"></P>
+<HR>
+<A NAME="Set Arcade Drive.vi"></A><H2>Set Arcade Drive.vi</H2>
+<P>Sets x and y axis of arcade robot drive.</P>
+<P><IMG SRC="Set_Arcade_Drivec.png" ALT="Set Arcade Drive.vi"></P>
+<P><IMG SRC="Set_Arcade_Drivep.png" ALT="Set Arcade Drive.vi"></P>
+<P><IMG SRC="Set_Arcade_Drived.png" ALT="Set Arcade Drive.vi"></P>
+<HR>
+<A NAME="Robot Global Data.vi"></A><H2>Robot Global Data.vi</H2>
+<P>This global VI can contain as many global variables as you need. Place a control on the panel, give it a good name. To read or write to it from a VI, drag the icon to the diagram of that VI. You can also drag from the project. Click on the node to change which global you access. You shouldn't have multiple locations writing to a global or it will cause a race-condition.</P>
+<P><IMG SRC="Robot_Global_Datagblc.png" ALT="Robot Global Data.vi"></P>
+<P><IMG SRC="Robot_Global_Datagblp.png" ALT="Robot Global Data.vi"></P>
+<HR>
+<A NAME="Convert Joystick Throttle.vi"></A><H2>Convert Joystick Throttle.vi</H2>
+<P>Converts a joystick axis range from [-1,1] to [0,1].</P>
+<P><IMG SRC="Convert_Joystick_Throttlec.png" ALT="Convert Joystick Throttle.vi"></P>
+<P><IMG SRC="Convert_Joystick_Throttlep.png" ALT="Convert Joystick Throttle.vi"></P>
+<P><IMG SRC="Convert_Joystick_Throttled.png" ALT="Convert Joystick Throttle.vi"></P>
+<HR>
+<A NAME="Vision Processing.vi"></A><H2>Vision Processing.vi</H2>
+<P>This VI runs in parallel to other tasks. It gets images from the camera, processes them for color or shape and use that information to affect robot behavior.</P>
+<P><IMG SRC="Vision_Processingc.png" ALT="Vision Processing.vi"></P>
+<P><IMG SRC="Vision_Processingp.png" ALT="Vision Processing.vi"></P>
+<P><IMG SRC="Vision_Processingd.png" ALT="Vision Processing.vi"></P>
+<P><IMG SRC="Vision_Processingd1.png" ALT="Vision Processing.vi"></P>
+<HR>
+<A NAME="Test.vi"></A><H2>Test.vi</H2>
+<P>This VI is called when test mode begins, and will automatically be terminated when it ends. You can add manual or automatic tests and invoke them from the dashboard.</P>
+<P><IMG SRC="Testc.png" ALT="Test.vi"></P>
+<P><IMG SRC="Testd.png" ALT="Test.vi"></P>
+<P><IMG SRC="Testd1.png" ALT="Test.vi"></P>
+<P><IMG SRC="Testd2.png" ALT="Test.vi"></P>
+<HR>
+<A NAME="Periodic Tasks.vi"></A><H2>Periodic Tasks.vi</H2>
+<P>This VI runs in parallel to other tasks. It can contain as many user-defined periodic loops as you need. These can carry out PID or other sorts of timed response.</P>
+<P><IMG SRC="Periodic_Tasksc.png" ALT="Periodic Tasks.vi"></P>
+<P><IMG SRC="Periodic_Tasksp.png" ALT="Periodic Tasks.vi"></P>
+<P><IMG SRC="Periodic_Tasksd.png" ALT="Periodic Tasks.vi"></P>
+<HR>
+<A NAME="Begin.vi"></A><H2>Begin.vi</H2>
+<P>Called before other user functions, this VI is expected to open initial I/O refnums, load in file data, and do all program initialization.  Notice that the <B>error out</B> terminal is simply used for data flow.  Wiring it to other structures or subVIs ensures that this VI runs first.</P>
+<P><IMG SRC="Beginc.png" ALT="Begin.vi"></P>
+<P><IMG SRC="Beginp.png" ALT="Begin.vi"></P>
+<P><IMG SRC="Begind.png" ALT="Begin.vi"></P>
+<HR>
+<A NAME="Finish.vi"></A><H2>Finish.vi</H2>
+<P>This VI is called just before exiting. It is expected to close I/O refnum, save collected data, etc.</P>
+<P><IMG SRC="Finishc.png" ALT="Finish.vi"></P>
+<P><IMG SRC="Finishd.png" ALT="Finish.vi"></P>
+<HR>
+<A NAME="Autonomous Independent.vi"></A><H2>Autonomous Independent.vi</H2>
+<P>This VI is called when autonomous begins, and will automatically be terminated when autonomous ends. You can carry out timed or sensor driven robot movement independently without needing to return to the caller.</P>
+<P><IMG SRC="Autonomous_Independentc.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentp.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd1.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd2.png" ALT="Autonomous Independent.vi"></P>
+</BODY>
+</HTML>
